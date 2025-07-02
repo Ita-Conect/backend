@@ -1,6 +1,10 @@
 import { FastifyInstance } from "fastify";
-import { createTask} from "./create-task";
+import { register } from "../http/controller/user/register";
+import { authenticate } from "../http/controller/user/authenticate";
 
 export async function routes(app: FastifyInstance) {
-  app.post("/tasks", createTask);
+  app.post("/register", register);
+  app.post("/authenticate", authenticate);
+  
 }
+
