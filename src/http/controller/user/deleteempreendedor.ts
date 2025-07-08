@@ -2,15 +2,15 @@ import { FastifyReply, FastifyRequest } from 'fastify'
 import { z } from 'zod'
 import { prisma } from '../../../lib/prisma'
 
-export async function authenticate(request: FastifyRequest, reply: FastifyReply) {
-    const loginBodySchema = z.object({
-    email: z.string().email(),
-    senha: z.string().min(8),
-  })
+export async function deleteempreendedor(request: FastifyRequest, reply: FastifyReply) {
+    const deleteBodySchema = z.object({
+        email: z.string().email(),
+        senha: z.string().min(8),
+    })
 
-  const { email, senha } = loginBodySchema.parse(request.body)
+  const { email, senha } = deleteBodySchema.parse(request.body)
 
-  const user = await prisma.usuario.findUnique({
+  const user = await prisma.empreendedor.findUnique({
     where: { email },
   })
 
@@ -22,11 +22,14 @@ export async function authenticate(request: FastifyRequest, reply: FastifyReply)
     return reply.status(401).send({ error: 'Credenciais inválidas.' })
   }
 
+  await prisma.empreendedor.delete({
+        where: { email },
+    })
+
   return reply.send({
-    message: 'Login realizado com sucesso!',
+    message: 'Usuário deletado!',
     user: {
       id: user.id,
-      nome: user.nome,
       email: user.email,
     },
   })
