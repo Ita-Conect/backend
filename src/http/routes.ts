@@ -6,8 +6,8 @@ import { deleteUsuario } from "../http/controller/user/deleteUsuario";
 import { updateUsuario } from "../http/controller/user/updateUsuario";
 import { createProduto } from "../http/controller/user/createProduto";
 import { createLoja } from "../http/controller/user/createLoja";
-import { registerempreendedor } from "../http/controller/user/registerEmpreendedor";
-import { deleteempreendedor } from "../http/controller/user/deleteEmpreendedor";
+import { registerempreendedor } from "../http/controller/user/registerempreendedor";
+import { deleteempreendedor } from "../http/controller/user/deleteempreendedor";
 
 export async function routes(app: FastifyInstance) {
   app.post("/register", register);
