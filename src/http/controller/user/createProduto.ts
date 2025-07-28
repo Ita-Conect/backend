@@ -6,7 +6,7 @@ export async function createProduto(request: FastifyRequest, reply: FastifyReply
   const bodySchema = z.object({
     nome: z.string(),
     descricao: z.string(),
-    preco: z.coerce.number(),
+    preco: z.number(),
     imagem: z.string(),
     categoria: z.string(),
     lojaId: z.number(),

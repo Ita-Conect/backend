@@ -13,10 +13,28 @@ export async function createLoja(request: FastifyRequest, reply: FastifyReply) {
     empreendedorId: z.number(),
   })
 
-  const data = bodySchema.parse(request.body)
+  const {
+    nome,
+    email,
+    telefone,
+    descricao,
+    endereco,
+    categoria,
+    empreendedorId,
+  } = bodySchema.parse(request.body)
 
   const loja = await prisma.loja.create({
-    data,
+    data: {
+      nome,
+      email,
+      telefone,
+      descricao,
+      endereco,
+      categoria,
+      empreendedor: {
+        connect: { id: empreendedorId },
+      },
+    },
   })
 
   return reply.status(201).send({ message: 'Loja criada com sucesso.', loja })
