@@ -1,10 +1,10 @@
 # ITA-CONNECT
 O projeto tem por finalidade promover uma maior visibilidade para pequenos empreendedores e pessoas que ofertam serviços no município de Itapajé. Para isso, a equipe pensou na construção de uma aplicação web que fosse destinada para agrupar essas pessoas e elas cadastrarem seus produtos e serviços.
 ## Membros da equipe e Orientador
-- Carlos Anderson - ADS 
-- Guilherme - ADS 
-- Pedro Willy - ADS 
-- Samilly - ADS
+- Carlos Anderson - 564853 - ADS 
+- Guilherme - 569662 - ADS 
+- Pedro Willy - 564678 - ADS 
+- Samilly - 571167 - ADS
 - Prof. Orientador: Anderson Uchôa
 ## Papéis ou tipos de usuário da aplicação
 - Empreendedores: são as pessoas que possuem um meio de venda e trabalho remunerado, ou seja, proprietários de pequenas lojas, sejam físicas ou não, e que buscam aumentar as suas vendas através de uma plataforma que se responsabilize por divulgar os seus produtos.
