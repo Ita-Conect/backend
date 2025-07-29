@@ -31,8 +31,32 @@ As principais funcionalidades escolhidas do sistema buscam principalmente trazer
 ## Tecnologias e frameworks utilizados
 **Frontend:**
 
-React
+React, Vite, Tailwind CSS, TypeScript, React Router DOM
 
 **Backend:**
 
 Prisma ORM, PostgreSQL, Fastify, Node.js, Typescript, Zod, Dotenv
+
+## Operações implementadas para cada entidade da aplicação
+
+|   Entidade   | Criação | Leitura | Atualização | Remoção |
+|--------------|---------|---------|-------------|---------|
+|   Usuario    |    X    |    X    |             |         |
+| Empreendedor |    X    |    X    |             |         |
+|     Loja     |    X    |    X    |             |         |
+|    Produto   |    X    |    X    |             |         |
+|   Avaliacao  |         |         |             |         |
+
+## Rotas da API REST utilizadas
+
+| Método HTTP |           URL            |
+|-------------|--------------------------|
+|     POST    |   /usuario               |
+|     POST    |   /empreendedor          |
+|     POST    |   /login                 |
+|     POST    |   /produto               |
+|     GET     |   /produto               |
+|     GET     |   /produto/:id           |
+|     POST    |   /lojas                 |
+|     GET     |   /loja/empreendedor/:id |
+|     GET     |   /produto/loja/:lojaId  |
